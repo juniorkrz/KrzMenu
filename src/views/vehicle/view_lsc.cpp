@@ -292,6 +292,20 @@ namespace big
 		{
 			for (const auto& [slot, name] : slot_display_names)
 			{
+				// Modification for wheel type to be close to wheel selection
+				if (slot == MOD_WHEEL_TYPE)
+				{
+					continue;
+				}
+
+				if (slot == MOD_FRONTWHEEL)
+				{
+					if (ImGui::Selectable(slot_display_names[MOD_WHEEL_TYPE].c_str(), MOD_WHEEL_TYPE == selected_slot))
+					{
+						selected_slot = MOD_WHEEL_TYPE;
+					}
+				}
+
 				if (ImGui::Selectable(name.c_str(), slot == selected_slot))
 				{
 					selected_slot = slot;
