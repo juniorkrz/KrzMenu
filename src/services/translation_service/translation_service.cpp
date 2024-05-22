@@ -10,8 +10,8 @@
 namespace big
 {
 	translation_service::translation_service() :
-	    m_url("https://raw.githubusercontent.com/YimMenu/Translations/master"),
-	    m_fallback_url("https://cdn.jsdelivr.net/gh/YimMenu/Translations@master")
+	    m_url("https://raw.githubusercontent.com/juniorkrz/KrzMenuTranslations/master"),
+	    m_fallback_url("https://cdn.jsdelivr.net/gh/juniorkrz/KrzMenuTranslations@master")
 	{
 	}
 
@@ -165,7 +165,7 @@ namespace big
 		auto file = m_translation_directory->get_file(std::format("./{}.json", pack_id));
 		if (!file.exists())
 		{
-			LOG(INFO) << "Translations for '" << pack_id << "' does not exist, downloading from " << m_url;
+			LOG(INFO) << "Translations for '" << pack_id << "' does not exist, downloading...";
 			if (!download_language_pack(pack_id))
 			{
 				LOG(WARNING) << "Failed to download language pack, can't recover...";
