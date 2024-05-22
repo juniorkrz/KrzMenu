@@ -148,14 +148,14 @@ BOOL APIENTRY DllMain(HMODULE hmod, DWORD reason, PVOID)
 				    std::this_thread::sleep_for(100ms);
 
 			    std::filesystem::path base_dir = std::getenv("appdata");
-			    base_dir /= "YimMenu";
+			    base_dir /= "KrzMenu";
 			    g_file_manager.init(base_dir);
 
 			    g.init(g_file_manager.get_project_file("./settings.json"));
-			    g_log.initialize("YimMenu", g_file_manager.get_project_file("./cout.log"), g.debug.external_console);
+			    g_log.initialize("KrzMenu", g_file_manager.get_project_file("./cout.log"), g.debug.external_console);
 			    LOG(INFO) << "Settings Loaded and logger initialized.";
 
-			    LOG(INFO) << "Yim's Menu Initializing";
+			    LOG(INFO) << "KrzMenu Initializing";
 			    LOGF(INFO, "Git Info\n\tBranch:\t{}\n\tHash:\t{}\n\tDate:\t{}", version::GIT_BRANCH, version::GIT_SHA1, version::GIT_DATE);
 
 			    // more tech debt, YAY!

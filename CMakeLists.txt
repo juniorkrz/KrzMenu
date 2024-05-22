@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(YimMenu CXX ASM_MASM)
+project(KrzMenu CXX ASM_MASM)
 
 if (NOT MSVC)
-  message(FATAL_ERROR "Unsupported compiler used '${CMAKE_CXX_COMPILER_ID}', YimMenu only supports MSVC.")
+  message(FATAL_ERROR "Unsupported compiler used '${CMAKE_CXX_COMPILER_ID}', KrzMenu only supports MSVC.")
 endif()
 
 set(SRC_DIR "${PROJECT_SOURCE_DIR}/src")
@@ -24,8 +24,8 @@ message("\nFetching custom modules")
 include(cmake/gtav-classes.cmake)
 
 
-# YimMenu
-message(STATUS "YimMenu")
+# KrzMenu
+message(STATUS "KrzMenu")
 file(GLOB_RECURSE SRC_MAIN
     "${SRC_DIR}/**.hpp"
     "${SRC_DIR}/**.h"
@@ -43,14 +43,14 @@ else ()
   add_compile_options(-Wa,-mbig-obj)
 endif ()
 
-add_library(YimMenu MODULE "${SRC_MAIN}")
+add_library(KrzMenu MODULE "${SRC_MAIN}")
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
-set_property(TARGET YimMenu PROPERTY CXX_STANDARD 23) # 23 Because std::format is not avalible in std:c++20 for some reason. Maybe it's because i use v142 toolset.
+set_property(TARGET KrzMenu PROPERTY CXX_STANDARD 23) # 23 Because std::format is not avalible in std:c++20 for some reason. Maybe it's because i use v142 toolset.
 
 source_group(TREE ${SRC_DIR} PREFIX "src" FILES ${SRC_MAIN} )
 
-target_include_directories(YimMenu PRIVATE 
+target_include_directories(KrzMenu PRIVATE 
     "${SRC_DIR}"
     "${json_SOURCE_DIR}/single_include"
     "${gtav_classes_SOURCE_DIR}"
@@ -58,13 +58,13 @@ target_include_directories(YimMenu PRIVATE
     "${minhook_SOURCE_DIR}/src/hde"
 )
 
-target_precompile_headers(YimMenu PRIVATE "${SRC_DIR}/common.hpp")
-target_link_libraries(YimMenu PRIVATE pugixml minhook AsyncLogger dbghelp imgui cpr lua_static)
+target_precompile_headers(KrzMenu PRIVATE "${SRC_DIR}/common.hpp")
+target_link_libraries(KrzMenu PRIVATE pugixml minhook AsyncLogger dbghelp imgui cpr lua_static)
 
 # Warnings as errors
-set_property(TARGET YimMenu PROPERTY COMPILE_WARNING_AS_ERROR ON)
+set_property(TARGET KrzMenu PROPERTY COMPILE_WARNING_AS_ERROR ON)
 
-add_compile_definitions(YimMenu 
+add_compile_definitions(KrzMenu 
     "_CRT_SECURE_NO_WARNINGS"
     "NOMINMAX"
     "WIN32_LEAN_AND_MEAN"

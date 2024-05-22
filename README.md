@@ -1,8 +1,8 @@
-# YimMenu
+# KrzMenu
 
 ![](https://img.shields.io/badge/dynamic/json?color=ffab00&label=Online%20Version&query=%24.game.online&url=https%3A%2F%2Fraw.githubusercontent.com%2FYimMenu%2FYimMenu%2Fmaster%2Fmetadata.json&style=flat-square&labelColor=000000) ![](https://img.shields.io/badge/dynamic/json?color=ffab00&label=Game%20Build&query=%24.game.build&url=https%3A%2F%2Fraw.githubusercontent.com%2FYimMenu%2FYimMenu%2Fmaster%2Fmetadata.json&style=flat-square&labelColor=000000)
 
-A mod menu base for Grand Theft Auto V.
+A mod menu based on [YimMenu](https://github.com/YimMenu/YimMenu) for Grand Theft Auto V.
 Strictly for educational purposes.
 
 YimMenu is originally based of off [BigBaseV2](https://github.com/Pocakking/BigBaseV2) which was an amazing base at the time but nowadays is a bit dated.
@@ -57,3 +57,8 @@ If you are doing custom modifications to the codebase and have a fork you are on
 You're free to contribute to YimMenu as long as the features are useful, not overly toxic and do not contain anything money related that might get the menu targeted by Take2.
 
 Make sure to read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## Credits
+Menus - Bases we use:
+ - [YimMenu](https://github.com/YimMenu/YimMenu) KrzMenu is entirely based on YimMenu.
+ - [BigBaseV2](https://github.com/Pocakking/BigBaseV2) YimMenu is based on BigBaseV2.
