@@ -912,10 +912,10 @@ namespace big
 
 		struct window
 		{
-			ImU32 background_color = 3696311571;
+			ImU32 background_color = 3695182627;
 			ImU32 text_color       = 4294967295;
-			ImU32 button_color     = 2947901213;
-			ImU32 frame_color      = 2942518340;
+			ImU32 button_color     = 2947882360;
+			ImU32 frame_color      = 1358787245;
 			float gui_scale        = 1.f;
 
 			ImFont* font_title     = nullptr;
@@ -928,14 +928,14 @@ namespace big
 
 			struct ingame_overlay
 			{
-				bool opened                = true;
+				bool opened                = false;
 				bool show_with_menu_opened = false;
 
 				bool show_fps              = true;
 				bool show_indicators       = true;
 				bool show_players          = true;
 				bool show_time             = true;
-				bool show_replay_interface = true;
+				bool show_replay_interface = false;
 				bool show_position         = false;
 				bool show_game_versions    = true;
 
