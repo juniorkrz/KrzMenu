@@ -119,7 +119,7 @@ namespace big
 
 		auto& colors                          = style.Colors;
 		colors[ImGuiCol_Text]                 = ImGui::ColorConvertU32ToFloat4(g.window.text_color);
-		colors[ImGuiCol_TextDisabled]         = ImVec4(0.24f, 0.23f, 0.29f, 1.00f);
+		colors[ImGuiCol_TextDisabled]         = ImVec4(0.53f, 0.52f, 0.62f, 1.00f);
 		colors[ImGuiCol_WindowBg]             = ImGui::ColorConvertU32ToFloat4(g.window.background_color);
 		colors[ImGuiCol_ChildBg]              = ImGui::ColorConvertU32ToFloat4(g.window.background_color);
 		colors[ImGuiCol_PopupBg]              = ImVec4(0.07f, 0.07f, 0.09f, 1.00f);
@@ -129,22 +129,22 @@ namespace big
 		colors[ImGuiCol_FrameBgHovered]       = ImVec4(0.24f, 0.23f, 0.29f, 1.00f);
 		colors[ImGuiCol_FrameBgActive]        = ImVec4(0.56f, 0.56f, 0.58f, 1.00f);
 		colors[ImGuiCol_TitleBg]              = ImVec4(0.10f, 0.09f, 0.12f, 1.00f);
-		colors[ImGuiCol_TitleBgCollapsed]     = ImVec4(1.00f, 0.98f, 0.95f, 0.75f);
-		colors[ImGuiCol_TitleBgActive]        = ImVec4(0.07f, 0.07f, 0.09f, 1.00f);
+		colors[ImGuiCol_TitleBgCollapsed]     = ImVec4(0.10f, 0.09f, 0.12f, 0.75f);// Purple theme
+		colors[ImGuiCol_TitleBgActive]        = ImGui::ColorConvertU32ToFloat4(g.window.frame_color);// Purple theme
 		colors[ImGuiCol_MenuBarBg]            = ImVec4(0.10f, 0.09f, 0.12f, 1.00f);
-		colors[ImGuiCol_ScrollbarBg]          = ImVec4(0.10f, 0.09f, 0.12f, 1.00f);
-		colors[ImGuiCol_ScrollbarGrab]        = ImVec4(0.80f, 0.80f, 0.83f, 0.31f);
-		colors[ImGuiCol_ScrollbarGrabHovered] = ImVec4(0.56f, 0.56f, 0.58f, 1.00f);
-		colors[ImGuiCol_ScrollbarGrabActive]  = ImVec4(0.06f, 0.05f, 0.07f, 1.00f);
+		colors[ImGuiCol_ScrollbarBg]          = ImVec4(0.10f, 0.09f, 0.12f, 1.00f);// Purple theme
+		colors[ImGuiCol_ScrollbarGrab]        = ImVec4(0.44f, 0.16f, 0.63f, 0.69f);// Purple theme
+		colors[ImGuiCol_ScrollbarGrabHovered] = ImVec4(0.62f, 0.37f, 0.80f, 0.69f);// Purple theme
+		colors[ImGuiCol_ScrollbarGrabActive]  = ImVec4(0.44f, 0.16f, 0.63f, 1.00f);// Purple theme
 		colors[ImGuiCol_CheckMark]            = ImVec4(1.00f, 0.98f, 0.95f, 0.61f);
 		colors[ImGuiCol_SliderGrab]           = ImVec4(0.80f, 0.80f, 0.83f, 0.31f);
 		colors[ImGuiCol_SliderGrabActive]     = ImVec4(0.06f, 0.05f, 0.07f, 1.00f);
 		colors[ImGuiCol_Button]               = ImVec4(0.24f, 0.23f, 0.29f, 1.00f);
 		colors[ImGuiCol_ButtonHovered]        = ImVec4(0.24f, 0.23f, 0.29f, 1.00f);
 		colors[ImGuiCol_ButtonActive]         = ImVec4(0.56f, 0.56f, 0.58f, 1.00f);
-		colors[ImGuiCol_Header]               = ImVec4(0.30f, 0.29f, 0.32f, 1.00f);
-		colors[ImGuiCol_HeaderHovered]        = ImVec4(0.56f, 0.56f, 0.58f, 1.00f);
-		colors[ImGuiCol_HeaderActive]         = ImVec4(0.06f, 0.05f, 0.07f, 1.00f);
+		colors[ImGuiCol_Header]               = ImVec4(0.47f, 0.16f, 0.68f, 1.00f);// Purple theme
+		colors[ImGuiCol_HeaderHovered]        = ImVec4(0.57f, 0.27f, 0.76f, 1.00f);// Purple theme
+		colors[ImGuiCol_HeaderActive]         = ImVec4(0.38f, 0.13f, 0.55f, 1.00f);
 		colors[ImGuiCol_ResizeGrip]           = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
 		colors[ImGuiCol_ResizeGripHovered]    = ImVec4(0.56f, 0.56f, 0.58f, 1.00f);
 		colors[ImGuiCol_ResizeGripActive]     = ImVec4(0.06f, 0.05f, 0.07f, 1.00f);
@@ -152,7 +152,7 @@ namespace big
 		colors[ImGuiCol_PlotLinesHovered]     = ImVec4(0.25f, 1.00f, 0.00f, 1.00f);
 		colors[ImGuiCol_PlotHistogram]        = ImVec4(0.40f, 0.39f, 0.38f, 0.63f);
 		colors[ImGuiCol_PlotHistogramHovered] = ImVec4(0.25f, 1.00f, 0.00f, 1.00f);
-		colors[ImGuiCol_TextSelectedBg]       = ImVec4(0.25f, 1.00f, 0.00f, 0.43f);
+		colors[ImGuiCol_TextSelectedBg]       = ImVec4(0.65f, 0.34f, 0.89, 0.43f);// Purple theme
 
 		save_default_style();
 	}

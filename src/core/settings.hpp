@@ -347,7 +347,7 @@ namespace big
 			bool auto_tp                      = false;
 			bool super_jump                   = false;
 			bool beast_jump                   = false;
-			bool graceful_landing			  = false;	
+			bool graceful_landing			  = false;
 			bool healthregen                  = false;
 			float healthregenrate             = 1.0f;
 			bool superman                     = false;
@@ -918,8 +918,8 @@ namespace big
 		{
 			ImU32 background_color = 3695182627;
 			ImU32 text_color       = 4294967295;
-			ImU32 button_color     = 2947882360;
-			ImU32 frame_color      = 1358787245;
+			ImU32 button_color     = 2950641820;
+			ImU32 frame_color      = 2943364426;
 			float gui_scale        = 1.f;
 
 			ImFont* font_title     = nullptr;
